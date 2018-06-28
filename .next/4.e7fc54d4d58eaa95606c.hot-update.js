@@ -5,16 +5,11 @@ webpackHotUpdate(4,{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Layout__ = __webpack_require__("./components/Layout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Chat__ = __webpack_require__("./components/Chat.js");
 var _jsxFileName = "C:\\Users\\siddharth.kundu\\Desktop\\repositories\\react-chat-app\\pages\\index.js";
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/index.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -29,6 +24,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 
 
 
@@ -61,10 +57,10 @@ function (_Component) {
       enumerable: true,
       writable: true,
       value: function value(evt) {
-        if (evt.keyCode == 13) {
+        if (evt.keyCode === 13) {
           var user = evt.target.value;
 
-          _this.section({
+          _this.setState({
             user: user
           });
         }
@@ -90,31 +86,31 @@ function (_Component) {
         pageTitle: "React Chat App",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("main", {
         className: "container-fluid position-absolute h-100 bg-dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 32
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "row position-absolute w-100 h-100",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 33
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("section", {
         className: "col-md-8 d-flex flex-row flex-wrap align-items-center align-content-center px-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 34
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", {
         className: "px-5 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 35
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         className: "d-block w-100 h1 text-light",
@@ -123,12 +119,12 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 36
         }
       }, user ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 39
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", {
         style: {
@@ -136,7 +132,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 40
         }
       }, "Hello!"), user) : "What's your name?"), !user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
         type: "text",
@@ -154,47 +150,27 @@ function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 52
         }
-      }))));
-    }
-  }, {
-    key: "__reactstandin__regenerateByEval",
-    // @ts-ignore
-    value: function __reactstandin__regenerateByEval(key, code) {
-      // @ts-ignore
-      this[key] = eval(code);
+      }, user && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Chat__["a" /* default */], {
+        activeUser: user,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        }
+      })))));
     }
   }]);
 
   return IndexPage;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-var _default = function _default() {
+/* harmony default export */ __webpack_exports__["default"] = (function () {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(IndexPage, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     }
   });
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (_default);
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/index.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/index.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(IndexPage, "IndexPage", "C:\\Users\\siddharth.kundu\\Desktop\\repositories\\react-chat-app\\pages\\index.js");
-  reactHotLoader.register(_default, "default", "C:\\Users\\siddharth.kundu\\Desktop\\repositories\\react-chat-app\\pages\\index.js");
-  leaveModule(module);
-})();
-
-;
+});
     (function (Component, route) {
       if(!Component) return
       if (false) return
@@ -218,4 +194,4 @@ var _default = function _default() {
 /***/ })
 
 })
-//# sourceMappingURL=4.db30322bb1163f7f32a6.hot-update.js.map
+//# sourceMappingURL=4.e7fc54d4d58eaa95606c.hot-update.js.map

@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout';
+import Chat from '../components/Chat';
 
 class IndexPage extends Component{
-    state = { user: null }
+    state = { 
+        user: null 
+    }
+
     handleKeyUp = evt => {
-        if(evt.keyCode == 13){
+        if(evt.keyCode === 13){
             const user =  evt.target.value;
-            this.section({ user });
+            this.setState({ user });
         }
     }
 
@@ -31,16 +35,12 @@ class IndexPage extends Component{
                             <div className="px-5 mx-5">
                                 <span className="d-block w-100 h1 text-light" style={{marginTop: -50}}>
                                     {
-                                        user
-                                            ?
-                                                (
+                                        user ? (
                                                     <span>
-                                                        <span style={{color: '#999'}}>Hello!</span>
+                                                        <span style={{color: '#999'}}>Hello! </span>
                                                         {user}
                                                     </span>
-                                                )
-                                            :
-                                                `What's your name?`
+                                                ) : `What's your name?`
 
                                     }
                                 </span>
@@ -50,7 +50,7 @@ class IndexPage extends Component{
                             </div>
                         </section>
                         <section className="col-md-4 position-relative d-flex flex-wrap h-100 align-items-start align-content-between bg-white px-0">
-                        
+                            { user && <Chat activeUser={user} /> }
                         </section>
                     </div>
                 </main>
